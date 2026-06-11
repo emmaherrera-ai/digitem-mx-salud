@@ -720,6 +720,28 @@ const faqJsonLd = {
         .hero-visual{height:350px !important;}
       }
 
+
+      /* Production V1.2: mobile hero simplificado.
+         Se elimina la foto del hero en mobile para mejorar claridad, respiración visual y foco en CTA. */
+      @media (max-width: 760px){
+        .hero{
+          padding:92px 20px 44px;
+          min-height:auto;
+        }
+        .hero-visual{
+          display:none !important;
+        }
+        .hero-copy{
+          max-width:100%;
+        }
+        .hero h1{
+          max-width:100%;
+        }
+        .hero-text{
+          max-width:100%;
+        }
+      }
+
     </style>
 
     <script>

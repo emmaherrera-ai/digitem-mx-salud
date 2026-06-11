@@ -1,4 +1,4 @@
-# DIGITEM-MX Salud — Production V1.1
+# DIGITEM-MX Salud — Production V1.2
 
 Landing page de producción para la vertical **DIGITEM-MX Salud**.
 
@@ -30,3 +30,10 @@ npm run dev
 ```bash
 npm run build
 ```
+
+
+## Production V1.2
+
+- Se elimina la imagen del hero en mobile para evitar saturación visual.
+- Se mantiene el hero desktop sin cambios.
+- La experiencia mobile prioriza H1, copy, CTAs y prueba social.
