@@ -1,24 +1,32 @@
-# DIGITEM-MX Salud V4.1
+# DIGITEM-MX Salud — Production V1.1
 
-Ajustes V4.1:
-- Hero vuelve a pantalla completa, sin apariencia de card.
-- Hero con psicóloga mujer y dentista/doctor varón visibles.
-- Fondo del hero con mayor profundidad, sin borde tipo tarjeta.
-- Sección de especialidades con imágenes como fondo/acento lateral, no solo cards tradicionales.
-- Copy conservado.
+Landing page de producción para la vertical **DIGITEM-MX Salud**.
 
-## Run local
+## Cambios V1.1
+
+- La raíz `/` carga la landing directamente, sin pantalla visible de redirección.
+- `/salud` se mantiene como URL principal de campaña.
+- Hero mobile optimizado con una sola imagen visual full-width y chips compactos integrados.
+- Se mantiene el hero desktop con composición amplia.
+
+## Rutas
+
+- `/`
+- `/salud`
+- `/salud/dentista`
+- `/salud/psicologia`
+- `/demo/dentista`
+- `/demo/psicologia`
+
+## Comandos
+
+```bash
 npm install
 npm run dev
+```
 
-Abrir: http://localhost:4321/salud
+## Build
 
-
-## V5
-- Especialidades en mobile con imagen full-background y degradado para mejor contraste.
-- Imágenes mobile específicas por vertical.
-- Copy intacto; solo mejora visual responsive.
-
-
-## V5
-- Ajuste final del logotipo DIGITEM-MX conforme al manual de marca: triángulo sólido frontal y dos perfiles de triángulo alineados con espaciado uniforme.
+```bash
+npm run build
+```

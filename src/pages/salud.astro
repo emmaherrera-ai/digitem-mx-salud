@@ -103,6 +103,11 @@ const faqJsonLd = {
           <div class="float-card card-seo"><span></span><strong>SEO local</strong><small>Preparada para Google</small></div>
           <div class="float-card card-wa"><span></span><strong>WhatsApp directo</strong><small>Contacto sin fricción</small></div>
           <div class="float-card card-trust"><span></span><strong>Presencia profesional</strong><small>Confianza desde el primer clic</small></div>
+          <div class="hero-mobile-caption" aria-hidden="true">
+            <span>SEO local</span>
+            <span>WhatsApp directo</span>
+            <span>Presencia profesional</span>
+          </div>
         </div>
       </section>
 
@@ -608,6 +613,111 @@ const faqJsonLd = {
       @media (max-width:420px){
         .demo-card.demo-visual{min-height:455px;}
         .demo-card.demo-visual img{height:100%;}
+      }
+
+
+      /* Production V1.1: Mobile hero uses one full-width visual instead of two stacked photos + KPI chips. */
+      @media (max-width: 760px){
+        .hero{
+          padding-bottom:42px;
+        }
+        .hero-visual{
+          position:relative !important;
+          z-index:2 !important;
+          inset:auto !important;
+          width:100% !important;
+          height:390px !important;
+          min-height:0 !important;
+          margin:30px 0 0 !important;
+          opacity:1 !important;
+          border-radius:32px;
+          overflow:hidden;
+          pointer-events:auto;
+          box-shadow:0 28px 70px rgba(16,32,44,.16);
+          background:#061b24;
+          isolation:isolate;
+        }
+        .hero-visual:after{
+          content:"";
+          position:absolute;
+          z-index:4;
+          inset:0;
+          background:
+            linear-gradient(180deg,rgba(255,255,255,.00) 0%,rgba(6,27,36,.10) 34%,rgba(6,27,36,.58) 100%),
+            linear-gradient(90deg,rgba(17,153,158,.22),rgba(224,116,34,.08));
+          pointer-events:none;
+        }
+        .hero-visual .medical-bg{
+          display:block;
+          z-index:1;
+          inset:0;
+          border-radius:0;
+          background:
+            radial-gradient(circle at 86% 12%,rgba(224,116,34,.22),transparent 28%),
+            radial-gradient(circle at 18% 20%,rgba(17,153,158,.28),transparent 34%);
+        }
+        .hero-visual .medical-bg:before{
+          content:"+";
+          z-index:5;
+          right:22px;
+          top:18px;
+          font-size:84px;
+          color:rgba(255,255,255,.18);
+          opacity:1;
+        }
+        .hero-visual .photo-stack{
+          position:absolute;
+          z-index:2;
+          inset:0 !important;
+        }
+        .hero-visual .photo-one{
+          display:none !important;
+        }
+        .hero-visual .photo-two{
+          display:block !important;
+          position:absolute !important;
+          inset:0 !important;
+          width:100% !important;
+          height:100% !important;
+          border-radius:0 !important;
+          object-fit:cover;
+          object-position:center top;
+          opacity:1 !important;
+          filter:saturate(.96) contrast(1.04) brightness(.86);
+          box-shadow:none !important;
+        }
+        .hero-visual .float-card{
+          display:none !important;
+        }
+        .hero-mobile-caption{
+          position:absolute;
+          z-index:6;
+          left:18px;
+          right:18px;
+          bottom:18px;
+          display:flex;
+          flex-wrap:wrap;
+          gap:8px;
+        }
+        .hero-mobile-caption span{
+          display:inline-flex;
+          align-items:center;
+          min-height:34px;
+          padding:0 12px;
+          border-radius:999px;
+          background:rgba(255,255,255,.68);
+          border:1px solid rgba(255,255,255,.34);
+          color:#073d45;
+          font-size:.72rem;
+          font-weight:900;
+          backdrop-filter:blur(16px) saturate(170%);
+          -webkit-backdrop-filter:blur(16px) saturate(170%);
+          box-shadow:0 12px 28px rgba(6,27,36,.14);
+        }
+      }
+
+      @media (max-width: 420px){
+        .hero-visual{height:350px !important;}
       }
 
     </style>
