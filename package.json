@@ -1,0 +1,16 @@
+{
+  "name": "digitem-mx-salud-production-v1",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "latest",
+    "astro": "latest"
+  },
+  "devDependencies": {}
+}
